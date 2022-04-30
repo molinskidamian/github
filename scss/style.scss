@@ -1,0 +1,57 @@
+$color-bg-header: #161b22;
+$color-bg-primary: #010409;
+$color-font-primary: #8b949e;
+$color-font-header: #c9d1d9;
+$color-link-blue: #58a6ff;
+$color-border: #30363d;
+$color-border-blue: #58a6ff;
+$radius: 0.3rem;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: $color-bg-primary;
+    border: 1px solid $color-border;
+    padding: 0.31rem 0.75rem;
+    border-radius: $radius;
+    color: $color-font-primary;
+}
+
+input:focus {
+    border: 1px solid $color-border-blue;
+}
+
+input:active {
+    border: 1px solid $color-border-blue;
+}
+
+::placeholder {
+    color: #272c33;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”,
+        “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”,
+        “Helvetica Neue”, sans-serif;
+    font-size: 16px;
+    background-color: $color-bg-primary;
+    color: $color-font-primary;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 4.25rem;
+    background-color: $color-bg-header;
+}
+
+.logo {
+    height: 3em;
+    fill: #fff;
+}
