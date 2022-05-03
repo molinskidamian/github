@@ -41,27 +41,52 @@ input:active {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
   font-size: 16px;
   background-color: #010409;
   color: #8b949e;
 }
 
-header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  height: 4.25rem;
-  background-color: #161b22;
-}
-
-.logo {
-  height: 3em;
-  fill: #fff;
-}
-
 /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+  header.header-main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px 1fr 1fr;
+        grid-template-columns: 100px 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    min-height: 4.25rem;
+    background-color: #161b22;
+  }
+  header.header-main .logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    height: 3em;
+    fill: #fff;
+  }
+  header.header-main .main-nav {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  header.header-main .user-nav {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (desktops, 992px and up) */
 /* Extra large devices (large desktops, 1200px and up) */
