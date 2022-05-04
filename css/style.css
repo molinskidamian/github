@@ -8,6 +8,10 @@
           box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 input {
   background-color: #010409;
   border: 1px solid #30363d;
@@ -40,6 +44,12 @@ input:active {
   color: #272c33;
 }
 
+.avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
   font-size: 16px;
@@ -52,22 +62,45 @@ body {
   header.header-main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 100px 1fr 1fr;
-        grid-template-columns: 100px 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    min-height: 4.25rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 5rem 1fr;
+        grid-template-rows: 5rem 1fr;
     background-color: #161b22;
   }
-  header.header-main .logo {
+  header.header-main .mobile-bars {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    height: 3em;
+    width: 1.5rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    fill: white;
+  }
+  header.header-main .logo {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    height: 2rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     fill: #fff;
+  }
+  header.header-main form.header--form {
+    outline: 1px dashed red;
+    display: none;
   }
   header.header-main .main-nav {
     -ms-grid-column: 2;
@@ -76,6 +109,7 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    display: none;
   }
   header.header-main .user-nav {
     -ms-grid-column: 3;
@@ -84,6 +118,19 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+  }
+  header.header-main .user-nav svg {
+    height: 1em;
+    fill: white;
+  }
+  header.header-main .user-nav .user-nav--item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 1rem;
   }
 }
 
