@@ -118,12 +118,21 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   header.header-main .user-nav svg {
     height: 1em;
     fill: white;
   }
   header.header-main .user-nav .user-nav--item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -131,6 +140,12 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 1rem;
+    display: none;
+  }
+  header.header-main .user-nav .user-nav--item:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

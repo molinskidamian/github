@@ -93,6 +93,8 @@ body {
 		.user-nav {
 			grid-column: 3 / 4;
 			grid-row: 1 / 2;
+			justify-content: end;
+			display: flex;
 
 			svg {
 				height: 1em;
@@ -100,10 +102,16 @@ body {
 			}
 
 			.user-nav--item {
+				display: flex;
 				justify-content: center;
 				align-items: center;
 				// outline: 1px dashed red;
 				margin-right: 1rem;
+				display: none;
+
+				&:first-child {
+					display: flex;
+				}
 			}
 		}
 	}
