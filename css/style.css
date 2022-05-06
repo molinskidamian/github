@@ -75,13 +75,12 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    width: 1.5rem;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    width: 1rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     fill: white;
+    margin: 1rem;
   }
   header.header-main .logo {
     -ms-grid-column: 2;
@@ -146,6 +145,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  header.header-main .user-nav .user-nav--item:first-child .caret-down {
+    display: none;
   }
 }
 
